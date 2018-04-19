@@ -2,7 +2,6 @@ C:\Users\bezim\source\repos\InvertedIndex\InvertedIndex\obj\Debug\InvertedIndex.
 C:\Users\bezim\source\repos\InvertedIndex\InvertedIndex\obj\Debug\MainWindow.g.cs
 C:\Users\bezim\source\repos\InvertedIndex\InvertedIndex\obj\Debug\App.g.cs
 C:\Users\bezim\source\repos\InvertedIndex\InvertedIndex\obj\Debug\InvertedIndex_MarkupCompile.cache
-C:\Users\bezim\source\repos\InvertedIndex\InvertedIndex\obj\Debug\InvertedIndex_MarkupCompile.lref
 C:\Users\bezim\source\repos\InvertedIndex\InvertedIndex\bin\Debug\InvertedIndex.exe.config
 C:\Users\bezim\source\repos\InvertedIndex\InvertedIndex\bin\Debug\InvertedIndex.exe
 C:\Users\bezim\source\repos\InvertedIndex\InvertedIndex\bin\Debug\InvertedIndex.pdb

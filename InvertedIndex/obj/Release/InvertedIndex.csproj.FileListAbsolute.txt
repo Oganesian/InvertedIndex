@@ -1,0 +1,14 @@
+C:\Users\bezim\source\repos\InvertedIndex\InvertedIndex\bin\Release\InvertedIndex.exe.config
+C:\Users\bezim\source\repos\InvertedIndex\InvertedIndex\bin\Release\InvertedIndex.exe
+C:\Users\bezim\source\repos\InvertedIndex\InvertedIndex\bin\Release\InvertedIndex.pdb
+C:\Users\bezim\source\repos\InvertedIndex\InvertedIndex\obj\Release\InvertedIndex.csprojResolveAssemblyReference.cache
+C:\Users\bezim\source\repos\InvertedIndex\InvertedIndex\obj\Release\MainWindow.baml
+C:\Users\bezim\source\repos\InvertedIndex\InvertedIndex\obj\Release\MainWindow.g.cs
+C:\Users\bezim\source\repos\InvertedIndex\InvertedIndex\obj\Release\App.g.cs
+C:\Users\bezim\source\repos\InvertedIndex\InvertedIndex\obj\Release\InvertedIndex_MarkupCompile.cache
+C:\Users\bezim\source\repos\InvertedIndex\InvertedIndex\obj\Release\InvertedIndex.g.resources
+C:\Users\bezim\source\repos\InvertedIndex\InvertedIndex\obj\Release\InvertedIndex.Properties.Resources.resources
+C:\Users\bezim\source\repos\InvertedIndex\InvertedIndex\obj\Release\InvertedIndex.csproj.GenerateResource.Cache
+C:\Users\bezim\source\repos\InvertedIndex\InvertedIndex\obj\Release\InvertedIndex.csproj.CoreCompileInputs.cache
+C:\Users\bezim\source\repos\InvertedIndex\InvertedIndex\obj\Release\InvertedIndex.exe
+C:\Users\bezim\source\repos\InvertedIndex\InvertedIndex\obj\Release\InvertedIndex.pdb

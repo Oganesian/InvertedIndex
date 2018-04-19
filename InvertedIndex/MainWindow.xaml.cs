@@ -1,17 +1,7 @@
-﻿using System;
+﻿using Microsoft.Win32;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.IO;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace InvertedIndex
 {
@@ -20,9 +10,59 @@ namespace InvertedIndex
     /// </summary>
     public partial class MainWindow : Window
     {
+        List<string> filesPaths;
         public MainWindow()
         {
             InitializeComponent();
+            filesPaths = new List<string>();
+        }
+
+        private void Add_Files_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Text files (*.txt)|*.txt|All files (*.*)|*.*";
+            openFileDialog.Multiselect = true;
+
+            if (openFileDialog.ShowDialog() == true)
+            {
+                foreach (string filename in openFileDialog.FileNames)
+                {
+                    if (!filesPaths.Contains(filename))
+                    {
+                        SourceFilesListBox.Items.Add(filename);
+                        filesPaths.Add(filename);
+                    }
+                }
+            }
+        }
+
+        private void Clear_File_List_Click(object sender, RoutedEventArgs e)
+        {
+            filesPaths.Clear();
+            SourceFilesListBox.Items.Clear();
+        }
+
+        private void Search_Click(object sender, RoutedEventArgs e)
+        {
+            string searchQueriesT = searchQueries.Text.Replace(" ", "");
+
+            string[] _searchQueries =
+                searchQueriesT.Split(',');
+            List<string> searchQueriesList = new List<string>();
+            List<string> searchSources = new List<string>();
+
+            foreach(string searchQuery in _searchQueries)
+            {
+                searchQueriesList.Add(searchQuery);
+            }
+            foreach(string filePath in filesPaths)
+            {
+                searchSources.Add(File.ReadAllText(filePath));
+            }
+
+            MyInvertedIndex myInvertedIndex = 
+                new MyInvertedIndex(searchQueriesList, searchSources);
+            Output.Text = myInvertedIndex.ToString();
         }
     }
 }

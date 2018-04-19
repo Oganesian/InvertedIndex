@@ -9,6 +9,10 @@ namespace InvertedIndex
         private List<string> searchQueries = new List<string>();
         private List<string> searchSources = new List<string>();
 
+        //==================================//
+        //           CONSTRUCTORS           //
+        //==================================//
+
         /// <summary>
         /// Initializes an InvertedIndex object
         /// </summary>
@@ -21,10 +25,6 @@ namespace InvertedIndex
 
             FindInvertedIndexes();
         }
-
-        //==================================//
-        //           CONSTRUCTORS           //
-        //==================================//
 
         /// <summary>
         /// Initializes an InvertedIndex object
@@ -140,6 +140,7 @@ namespace InvertedIndex
                     }
                     sourceIndex++;
                 }
+                sourceIndex = 0;
                 queryIndex++;
             }
         }
@@ -150,13 +151,15 @@ namespace InvertedIndex
             int sourceIndex = 0;
             foreach(string query in searchQueries)
             {
-                toString += "\"" + query + "\"\t{ ";
+                toString += "\"" + query + "\" \t{ ";
                 foreach (int invertedIndex in invertedIndexes[sourceIndex])
                 {
                     toString += invertedIndex + ", ";
                 }
-                toString = toString.Remove(toString.Length - 2);
-                toString += " }";
+                if(invertedIndexes[sourceIndex].Count > 0)
+                    toString = toString.Remove(toString.Length - 2); // Remove last comma
+                toString += " }\n";
+                sourceIndex++;
             }
             return toString;
         }

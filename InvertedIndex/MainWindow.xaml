@@ -3,10 +3,17 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:InvertedIndex"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="290" Width="454.5">
     <Grid>
-        
+        <TextBox Name="searchQueries" HorizontalAlignment="Left" Height="23" Margin="10,37,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="222"/>
+        <Label Content="Words to search (separated by commas)" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <Label Content="Source files: " HorizontalAlignment="Left" Margin="10,69,0,0" VerticalAlignment="Top" MaxWidth="222" MaxHeight="54"/>
+        <TextBox IsReadOnly="True" Name="Output" HorizontalAlignment="Right" Height="170" Margin="0,10,10,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="180"/>
+        <Button Content="Add files" HorizontalAlignment="Left" Margin="50,0,0,30" VerticalAlignment="Bottom" Width="100" Height="25" FontSize="14" Click="Add_Files_Click"/>
+        <Button Content="Clear file list" HorizontalAlignment="Center" Margin="0,0,0,30" VerticalAlignment="Bottom" Width="100" Height="25" FontSize="14" Click="Clear_File_List_Click"/>
+        <Button Content="Search" HorizontalAlignment="Right" Margin="0,0,50,30" VerticalAlignment="Bottom" Width="100" Height="25" FontSize="14" Click="Search_Click"/>
+        <ListBox Name="SourceFilesListBox" HorizontalAlignment="Left" Height="80" Margin="10,96,0,0" VerticalAlignment="Top" Width="222"/>
+
     </Grid>
 </Window>
