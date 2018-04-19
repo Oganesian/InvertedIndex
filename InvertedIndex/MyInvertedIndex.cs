@@ -132,6 +132,7 @@ namespace InvertedIndex
             foreach(string sQuery in searchQueries)
             {
                 invertedIndexes.Add(new List<int>());
+
                 foreach(string sSource in searchSources)
                 {
                     if (sSource.Contains(sQuery))

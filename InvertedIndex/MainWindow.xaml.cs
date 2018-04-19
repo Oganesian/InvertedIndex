@@ -44,7 +44,7 @@ namespace InvertedIndex
 
         private void Search_Click(object sender, RoutedEventArgs e)
         {
-            string searchQueriesT = searchQueries.Text.Replace(" ", "");
+            string searchQueriesT = searchQueries.Text;
 
             string[] _searchQueries =
                 searchQueriesT.Split(',');
@@ -53,11 +53,28 @@ namespace InvertedIndex
 
             foreach(string searchQuery in _searchQueries)
             {
-                searchQueriesList.Add(searchQuery);
+                string sQuery = searchQuery;
+                sQuery = searchQuery.Replace("\\W", "");
+                if (sQuery.StartsWith(" "))
+                {
+                    searchQueriesList.Add(sQuery.Substring(1));
+                }
+                else
+                {
+                    searchQueriesList.Add(sQuery);
+                }
             }
             foreach(string filePath in filesPaths)
             {
-                searchSources.Add(File.ReadAllText(filePath));
+                string source = File.ReadAllText(filePath);
+                /*
+                "a" 	{ 2 }
+                "banana" 	{  }
+                "is" 	{ 0, 1, 2 }
+                "it" 	{ 0 }
+                "what" 	{ 0 }
+                                 */
+                searchSources.Add(source);
             }
 
             MyInvertedIndex myInvertedIndex = 
