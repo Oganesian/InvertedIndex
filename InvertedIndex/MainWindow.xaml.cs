@@ -1,4 +1,4 @@
-﻿using Microsoft.Win32;
+using Microsoft.Win32;
 using System.Collections.Generic;
 using System.IO;
 using System.Windows;
@@ -67,13 +67,6 @@ namespace InvertedIndex
             foreach(string filePath in filesPaths)
             {
                 string source = File.ReadAllText(filePath);
-                /*
-                "a" 	{ 2 }
-                "banana" 	{  }
-                "is" 	{ 0, 1, 2 }
-                "it" 	{ 0 }
-                "what" 	{ 0 }
-                                 */
                 searchSources.Add(source);
             }
 
